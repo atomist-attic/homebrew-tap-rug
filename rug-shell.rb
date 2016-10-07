@@ -2,9 +2,9 @@ require 'formula'
 
 class RugShell < Formula
   homepage 'http://github.com/atomist/rug-shell/'
-  url 'https://github.com/atomist/homebrew-tap/releases/download/1.0.0-SNAPSHOT/rug-shell-1.0.0-SNAPSHOT-bin.tar.gz'
-  version '1.0.0-SNAPSHOT'
-  sha256 '82f3e3064d124daaa7b36b79ec768db4792a4d69afea8bd1aac28100da987faf'
+  url 'https://github.com/atomist/homebrew-tap/releases/download/1.0.0-20161007150228/rug-shell-1.0.0-20161007150228-bin.tar.gz'
+  version '1.0.0-20161007150228'
+  sha256 '147af7c7c5b7a7cf7b996291f300939bf262589fabe493ac1b67ace7f01fd51e'
 
   def install
     root = '.'
