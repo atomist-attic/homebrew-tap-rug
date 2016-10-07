@@ -2,9 +2,9 @@ require 'formula'
 
 class Rugshell < Formula
   homepage 'http://github.com/atomist/rug-shell/'
-  url 'https://repo.spring.io/${repo}/org/springframework/boot/spring-boot-cli/1.0.0-SNAPSHOT/spring-boot-cli-1.0.0-SNAPSHOT-bin.tar.gz'
+  url 'https://github.com/atomist/homebrew-tap/releases/download/1.0.0-SNAPSHOT/rug-shell-1.0.0-SNAPSHOT-bin.tar.gz'
   version '1.0.0-SNAPSHOT'
-  sha256 '423dd7edd23e7ed22f7b7c5d8a3b86760405d969699f8a165610cf6b2863fa5f'
+  sha256 '82f3e3064d124daaa7b36b79ec768db4792a4d69afea8bd1aac28100da987faf'
 
   def install
     root = '.'
