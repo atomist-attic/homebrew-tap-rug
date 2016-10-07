@@ -1,6 +1,6 @@
 require 'formula'
 
-class Rugshell < Formula
+class RugShell < Formula
   homepage 'http://github.com/atomist/rug-shell/'
   url 'https://github.com/atomist/homebrew-tap/releases/download/1.0.0-SNAPSHOT/rug-shell-1.0.0-SNAPSHOT-bin.tar.gz'
   version '1.0.0-SNAPSHOT'
