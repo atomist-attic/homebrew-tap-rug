@@ -5,6 +5,6 @@ This a [Homebrew](https://github.com/mxcl/homebrew) [tap](https://github.com/Hom
 ## Usage
 
 ```
-rew tap atomist/tap
+brew tap atomist/tap
 brew install rug-shell
 ```
