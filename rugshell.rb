@@ -1,6 +1,6 @@
 require 'formula'
 
-class RugShell < Formula
+class Rugshell < Formula
   homepage 'http://github.com/atomist/rug-shell/'
   url 'https://repo.spring.io/${repo}/org/springframework/boot/spring-boot-cli/1.0.0-SNAPSHOT/spring-boot-cli-1.0.0-SNAPSHOT-bin.tar.gz'
   version '1.0.0-SNAPSHOT'
