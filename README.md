@@ -4,7 +4,8 @@ This a [Homebrew](https://github.com/mxcl/homebrew) [tap](https://github.com/Hom
 
 ## Usage
 
-```
+```sh
 brew tap atomist/tap
+brew install rug-cli
 brew install rug-shell
 ```
