@@ -1,15 +1,30 @@
-require 'formula'
-
 class RugCli < Formula
-  homepage 'http://github.com/atomist/rug-cli/'
-  url 'https://github.com/atomist/homebrew-tap/releases/download/0.0.1-20161014150246/rug-cli-0.0.1-20161014150246-bin.tar.gz'
-  version '0.0.1-20161014150246'
-  sha256 '74a797332592798f648a68d1f0824a6a269eceaf624e83f2d75bd46bfe4a133c'
+  desc "Atomist rug command-line interface."
+  homepage "https://github.com/atomist/rug-cli"
+  url "https://#{ENV["ATOMIST_REPO_USER"]}:#{ENV["ATOMIST_REPO_TOKEN"]}@atomist.jfrog.io/atomist/libs-release/com/atomist/rug-cli/0.10.2/rug-cli-0.10.2-bin.tar.gz"
+  sha256 "b3d073d328a76ddf888dc02700f7cadaf81aa0a674a1e76b169fd35d27853b1c"
+  head "https://github.com/atomist/rug-cli.git"
+
+  bottle :unneeded
+
+  depends_on :java => "1.8+"
+  depends_on "maven"
 
   def install
-    root = '.'
+    if build.head?
+      system "mvn", "--settings", ".settings.xml", "-B", "-V", "package", "-DskipTests"
+      libexec.install Dir["target/rug-cli-*-SNAPSHOT-bin/rug-cli-*-SNAPSHOT/*"]
+    else
+      libexec.install Dir["*"]
+    end
+    bin.install_symlink "#{libexec}/bin/rug"
+    bash_completion.install "#{libexec}/etc/bash_completion.d/rug"
+  end
 
-    bin.install Dir["#{root}/bin/rug-cli"]
-    lib.install Dir["#{root}/lib/rug-cli-*.jar"]
+  test do
+    assert File.exist? "#{bin}/rug"
+    if not build.head?
+      assert_match version.to_s, shell_output("#{bin}/rug --version 2>&1", 0)
+    end
   end
 end
