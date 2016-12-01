@@ -1,8 +1,8 @@
 class RugCli < Formula
   desc "Atomist rug command-line interface."
   homepage "https://github.com/atomist/rug-cli"
-  url "https://atomist.jfrog.io/atomist/libs-release/com/atomist/rug-cli/0.10.5/rug-cli-0.10.5-bin.tar.gz"
-  sha256 "8872f1402e5b217a71a6f0b7f7368bc1c7905cfb08b0b724f520225f37ad4363"
+  url "https://atomist.jfrog.io/atomist/libs-release/com/atomist/rug-cli/0.11.0/rug-cli-0.11.0-bin.tar.gz"
+  sha256 "42fe2835dd452b5a52053feda333f46fac999647c336473148d7cdcd26b2777b"
   head "https://github.com/atomist/rug-cli.git"
 
   bottle :unneeded
@@ -12,7 +12,7 @@ class RugCli < Formula
 
   def install
     if build.head?
-      system "mvn", "--settings", ".settings.xml", "-B", "-V", "package", "-DskipTests"
+      system "mvn", "-B", "-V", "package", "-DskipTests"
       libexec.install Dir["target/rug-cli-*-SNAPSHOT-bin/rug-cli-*-SNAPSHOT/*"]
     else
       libexec.install Dir["*"]
