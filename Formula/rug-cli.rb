@@ -1,8 +1,8 @@
 class RugCli < Formula
   desc "CLI for creating and running Rugs"
   homepage "https://github.com/atomist/rug-cli"
-  url "https://atomist.jfrog.io/atomist/libs-release/com/atomist/rug-cli/0.16.5/rug-cli-0.16.5-bin.tar.gz"
-  sha256 "ced710f7c6bed8b009fd765d49f27e0b74080c920ba855fff497911f3a3ae3e3"
+  url "https://atomist.jfrog.io/atomist/libs-release/com/atomist/rug-cli/0.16.6/rug-cli-0.16.6-bin.tar.gz"
+  sha256 "0964dd6898a1c923ca8206c1301de52bf48389d591960734eb28d2172da0754f"
   head "https://github.com/atomist/rug-cli.git"
 
   bottle :unneeded
