@@ -1,14 +1,15 @@
 class RugCli < Formula
   desc "CLI for creating and running Rugs"
   homepage "https://github.com/atomist/rug-cli"
-  url "https://atomist.jfrog.io/atomist/libs-release/com/atomist/rug-cli/0.24.0/rug-cli-0.24.0-bin.tar.gz"
-  sha256 "116c691152f6727929adc71fdcf8739d40324c924404b7e850b958fc585d4652"
+  url "https://atomist.jfrog.io/atomist/libs-release/com/atomist/rug-cli/0.25.0/rug-cli-0.25.0-bin.tar.gz"
+  sha256 "37518c0b8edba6e0b1b8f0d9ecf7bdbbc632d943510416b4d9e7c980b8e0f74e"
   head "https://github.com/atomist/rug-cli.git"
 
   bottle :unneeded
 
   depends_on :java => "1.8+"
-  depends_on "maven"
+  depends_on "maven" => :build
+  depends_on "node" => :recommended
 
   def install
     if build.head?
